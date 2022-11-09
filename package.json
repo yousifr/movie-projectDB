@@ -1,0 +1,22 @@
+{
+  "name": "movie-project",
+  "version": "1.0.0",
+  "description": "This is a movie database project, where it shows movies, their casts, ratings, trailers, related movies, genres, and so on.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halitbatur/movie-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/halitbatur/movie-project/issues"
+  },
+  "homepage": "https://github.com/halitbatur/movie-project#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.2"
+  }
+}

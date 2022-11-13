@@ -2,14 +2,281 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+body{
+    width: 100%;
+	height: auto;
+
+	background: rgba(0, 0, 0, 0.787);
+
+}
+
 #movie-backdrop {
     width: 100%;
+    padding-top: 32px;
+    /* background-color: #669999; */
 }
 
 .container {
-    padding-top: 32px;
+ 
+    width:auto;
+    display: grid;
+      gap: 20px 100px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* background-color: #669999; */
 }
 
 #actors {
-    margin: 24px 16px 0 0;
+    /* margin: 24px 16px 0 0;
+} */
+}
+
+#single-movie-box{
+    position: relative;
+    width: 100%;
+    height:auto;
+    flex-wrap: wrap;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:25px;
+  margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+     align-items: center;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    transform-style: preserve-3d;
+    transform: perspective(800px) 
+}
+#movie-backdrop{
+    position: relative;
+    width: auto;
+    height:auto;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px; 
+  flex-wrap: wrap;
+    
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    transform-style: preserve-3d;
+    transform: perspective(800px) 
+}
+#single-movie-deatils{
+     display: flex;
+    justify-content: space-between;
+    justify-items:flex-start;
+    align-items:flex-start; 
+    flex-direction: row;
+    width: 150%;
+    height:auto;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    margin:30px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    transform-style: preserve-3d;
+    transform: perspective(800px) 
+}
+#movie-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 1rem;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+  
+}
+#movie-release-date{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+}
+#overview-movie-single{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 1.2rem;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+}
+#movie-overview{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 1.2rem;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+}
+#movie-runtime{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-bottom: 1.2rem;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+}
+#movie-language{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-bottom: 1.2rem;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+}
+#movie-rating{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-bottom: 1.2rem;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+}
+#actorList-singleMovie-page{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    transform-style: preserve-3d;
+    transform: perspective(800px) 
+}
+#companyList-singleMovie-page{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    transform-style: preserve-3d;
+    transform: perspective(800px) 
+}
+.movieActorsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+   font-family: Arial, Helvetica, sans-serif;
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.5);
+    border-bottom:1px solid rgba(255,255,255,0.5);
+}
+.movieCompaniesDiv{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+  
+   font-family: Arial, Helvetica, sans-serif;
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.5);
+    border-bottom:1px solid rgba(255,255,255,0.5);
+}
+.actorList{
+    display: flex;
+    padding: 20px;
+    justify-items: space-between;
+    flex-wrap: wrap;
+}
+.companyList{
+    display: flex;
+    padding: 20px;
+    justify-items: space-between;
+    flex-wrap: wrap;
+}
+.relatedList{
+    display: flex;
+    padding: 20px;
+    justify-items: space-between;
+    flex-wrap: wrap;
+}
+.actors-sigle-page{
+    flex-wrap: wrap;
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.5);
+    border-bottom:1px solid rgba(255,255,255,0.5);
+}
+.companies-sigle-page{
+    flex-wrap: wrap;
+    max-width: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    border-radius:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.5);
+    border-bottom:1px solid rgba(255,255,255,0.5);
+}
+.related_single_page{
+    flex-wrap: wrap;
+    max-width: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    border-radius:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.5);
+    border-bottom:1px solid rgba(255,255,255,0.5);
+}
+#utubvid{
+    height: 400px;
+    width: 600px;
+    margin:46px ;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+     border-radius:15px;
+     border-top:1px solid rgba(255,255,255,0.5);
+     border-left:1px solid rgba(255,255,255,0.5);
+     border-right:1px solid rgba(255,255,255,0.5);
+     border-bottom:1px solid rgba(255,255,255,0.5);
 }

@@ -372,6 +372,10 @@ movieRelatedDiv.innerHTML = `
                <div ><h3 class="filmname">${film.title}</h3></div>
            </div>
            `;
+           filDiv.addEventListener('click', function(){
+            movieDetails(film)
+           
+            })
            filDiv.innerHTML += f;
        })
    }

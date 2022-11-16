@@ -266,7 +266,10 @@ movieActors.cast.slice(0, 5).forEach(actor => {
  movieActorsDiv.innerHTML = `
 <img class="actors-sigle-page m-2" src="${PROFILE_BASE_URL+ actor.profile_path}" > 
  <p id='actorsearch' class='text-slate-400 p-1  border-1 bg-black/50 rounded-lg '>${actor.name}</p>`;
- 
+  movieRelatedDiv.addEventListener('click', function(){
+ movieDetails(relatedMovie)
+
+ })
 actorList.appendChild(movieActorsDiv);
 
 movieActorsDiv.addEventListener('click', function(e){

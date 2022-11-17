@@ -6,17 +6,78 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link href="/dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Movie</title>
  </head>
 
- <body> 
+ <body class="bg-slate-800"> 
+
+  <div class="resnavbar absolute justify-items-end  top-0 right-0 bg-white w-2/3 h-screen z-10 md:hidden lg:hidden hidden  " id="resnavbar">
+    <div class="myclose m-3 cursor-pointer justify-self-start " id="myclose" onclick="displayNavbar()">X</div>
+    <div class="dropdowngenre" id="dropdowngenre">
+      <label for="drop-down">Genres:</label>
+      <select name="drop-down" id="drop-down">
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+      </select>
+    </div>
+    <div class="dropdownactors">   
+      <label for="drop-down">Actors:</label>
+      <select name="drop-down" id="drop-down">
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+      </select>
+    </div>
+    <div class="dropdownfilter">   
+      <label for="drop-down">Filter:</label>    
+      <select name="drop-down" id="drop-down">
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+      </select>
+    </div>
+    <div>About</div>
+    <div><input type="text" placeholder="search"></div>  
+
+
+  </div>
+ 
+  <div class="container">
+    <nav class="flex justify-between  bg-slate-800  ">
+      <div class="m-4 text-3xl cursor-pointer text-yellow-400"><i class="fa-solid fa-film"></i></div>
+      <div class="m-4 text-3xl cursor-pointer text-yellow-400 md:hidden lg:hidden " onclick="displayNavbar()" ><i class="fa-solid fa-bars"></i></div>
+
+    
+    </nav>
+    <header class="h-screen relative">
+      <img class=" w-screen h-screen blur-sm  " src="../images/headerbg.jpg" alt="theater">
+      <h1 class="absolute top-1/3 left-7 font-bold text-white text-5xl  ">Discover Unlimited Movies and More...</h1>
+    </header>
+    <div class="movieslist md:grid md:grid-cols-2 lg:grid lg:grid-cols-3">
+      
+      <div class="moviecard m-3 relative rounded-md shadow-xl cursor-pointer bg-cardbg ">
+        <img  class=" rounded-tr-md rounded-tl-md" src="../images/headerbg.jpg" alt="movieImg">
+        <h2 class=" text-white text-4xl m-3">Downtown</h2>
+        <h3 class="text-white text-xl ml-3">rating</h3>  
+        <h4 class="text-white text-xl ml-3 ">Genres</h4>
+        <div class="bg-slate-500 absolute top-0 h-full w-full rounded-md opacity-0 hover:opacity-80 text-white p-3  ">
+          <div class="hoverrating">Rating:</div>
+          <div class="hovergenres">Genres:</div>
+          <div class="hoverdesc">Description:</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
     
 
 
 
-     <div class="container">
-    </div> 
+     <!-- <div class="container">  </div>   -->
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html> 

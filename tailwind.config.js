@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+       colors: {
+        'cardbg': '#615D5C',
+      },
+    },
   },
   plugins: [],
 }

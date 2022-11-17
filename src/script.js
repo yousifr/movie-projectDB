@@ -174,7 +174,6 @@ movies.map((movie) => {
 const CONTAINER = document.querySelector(".container");
 const renderActors = ()=>{
 CONTAINER.innerHTML=`
-
 <div class="personal_img">
 <img id="Perspic" src="https://image.tmdb.org/t/p/original/kL0lWLJA6lbvmPM3YL0ISE6rVr6.jpg" alt="Pers pic">
 </div>
@@ -202,7 +201,6 @@ CONTAINER.innerHTML=`
      </div>
      
  </div>
-
  </div>
 `;
 
@@ -216,7 +214,6 @@ const renderMovie = (movie, movieActors, videos ,related ) => {
 
 CONTAINER.innerHTML = `
 <div class=" grid-cols-2 row-span-1 row bg-no-repeat bg-cover" id='single-movie-box' style='background-image: url("${BACKDROP_BASE_URL + movie.backdrop_path}")'>
-
 <div id='single-movie-deatils' class="flex-wrap px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
 <div class='flex-wrap'>
    <h2 id="movie-title" class='text-slate-400 flex-wrap column mt-5 text-base font-medium tracking-tight'>${movie.title}</h2>
@@ -266,10 +263,7 @@ movieActors.cast.slice(0, 5).forEach(actor => {
  movieActorsDiv.innerHTML = `
 <img class="actors-sigle-page m-2" src="${PROFILE_BASE_URL+ actor.profile_path}" > 
  <p id='actorsearch' class='text-slate-400 p-1  border-1 bg-black/50 rounded-lg '>${actor.name}</p>`;
-  movieRelatedDiv.addEventListener('click', function(){
- movieDetails(relatedMovie)
 
- })
 actorList.appendChild(movieActorsDiv);
 
 movieActorsDiv.addEventListener('click', function(e){
@@ -285,8 +279,6 @@ movieActorsDiv.addEventListener('click', function(e){
 })
 
 
-
-// Calling that async function
 
 });
 const directorList = document.querySelector(".directorList");
@@ -325,8 +317,14 @@ movieRelatedDiv.setAttribute("class","movieRelatedDiv");
 movieRelatedDiv.innerHTML = `
 <img class="actors-sigle-page m-2" src="${PROFILE_BASE_URL+ relatedMovie.backdrop_path}" > 
  <p class='text-slate-400 p-1  border-1 bg-black/50 rounded-lg m-1'>${relatedMovie.original_title} </p> `;
- relatedList.appendChild(movieRelatedDiv)
+
+ movieRelatedDiv.addEventListener('click', function(){
+    movieDetails(relatedMovie);
+   
+    })
+    relatedList.appendChild(movieRelatedDiv)
 })
+
  };
 
 
@@ -385,7 +383,4 @@ movieRelatedDiv.innerHTML = `
    })
  
 }
-
-
-
 document.addEventListener("DOMContentLoaded", autorun);

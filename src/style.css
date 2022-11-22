@@ -1,26 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.hoverActorP{
-  display: none;
-}
-.hoverActorP:hover{
-  display: block;
-  font-size: small;
-  font-family:'Courier New', Courier, monospace, sans-serif;
-  color: #f5f5f5;
-}
-.table-borderless{
-  color: antiquewhite;
-  text-align: left;
-}
+
 #desc {
-  display: none;
+  flex-wrap: wrap;
+  color:#f5f5f5;
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+    border-radius:15px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.5);
+    border-bottom:1px solid rgba(255,255,255,0.5);
 }
 
-.card-body:hover #desc {
-  display: block;
-}
 
 .card-body {
   height: 10%;
@@ -255,6 +252,10 @@ margin-right:55% ;
     border-right:1px solid rgba(255,255,255,0.5);
     border-bottom:1px solid rgba(255,255,255,0.5);
 }
+
+
+
+
 .logo{
   color:#f5f5f5;
   font-size:3rem;
@@ -263,7 +264,7 @@ margin-right:55% ;
   text-align: center;
   font-family:'Courier New', Courier, monospace, sans-serif;
   margin:8px;
-  position: relative;
+
   box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
   border-radius:15px;
   display: flex;
@@ -284,6 +285,7 @@ margin-right:55% ;
   text-align: center;
   font-family:'Courier New', Courier, monospace, sans-serif;
   margin:8px;
+  margin-right: 170px;
   position: relative;
   box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
   border-radius:15px;
@@ -382,14 +384,6 @@ margin-right:55% ;
   text-align: left;
 }
 
-
-.top-nav{
-    background: linear-gradient(to top, rgba(0, 0, 0, 0), #000000f2);
-    height: 80px;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-}
 
 header{
   display: flex;
@@ -674,6 +668,15 @@ header {
     border-top:1px solid rgba(255,255,255,0.5);
     border-left:1px solid rgba(255,255,255,0.5);
 }
+.fRow{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius:15px;
+  border-top:1px solid rgba(255,255,255,0.5);
+  border-left:1px solid rgba(255,255,255,0.5);
+}
 #overview-movie-single{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
@@ -762,6 +765,21 @@ header {
     border-right:1px solid rgba(255,255,255,0.5);
     border-bottom:1px solid rgba(255,255,255,0.5);
 }
+.movieRelatedDiv{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+  
+   font-family: Arial, Helvetica, sans-serif;
+    border-radius:15px;
+    border-top:1px solid rgba(255,255,255,0.5);
+    border-left:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.5);
+    border-bottom:1px solid rgba(255,255,255,0.5);
+}
 .movieCompaniesDiv{
   display: flex;
     flex-direction: column;
@@ -837,8 +855,8 @@ header {
     border-bottom:1px solid rgba(255,255,255,0.5);
 }
 #utubvid{
-    height: 400px;
-    width: 600px;
+    height: 300px;
+    width: 450px;
     margin:46px ;
     margin-left: 100px;
     display: flex;
